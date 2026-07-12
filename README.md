@@ -1,35 +1,37 @@
 # 😷 MadMasker
 
-Real-time Face Mask Detection using **TensorFlow**, **Keras**, **OpenCV**, and **Streamlit**. This project leverages **MobileNetV2** to accurately classify whether a person is wearing a face mask from images and live webcam video.
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+### Real-Time Face Mask Detection using Deep Learning
+
+Built with **TensorFlow**, **Keras**, **OpenCV**, and **Streamlit** using the **MobileNetV2** architecture.
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12-orange?style=for-the-badge&logo=tensorflow)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red?style=for-the-badge&logo=streamlit)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+</div>
 
 ---
 
-## 📌 Overview
+## 📖 Overview
 
-MadMasker is a deep learning-based computer vision application that detects whether a person is wearing a face mask. The project includes:
+MadMasker is a real-time face mask detection application powered by Deep Learning and Computer Vision. It uses the MobileNetV2 architecture to classify whether a person is wearing a face mask from both static images and live webcam streams.
 
-- 🖼️ Image-based face mask detection
-- 📹 Real-time webcam detection
-- 🌐 Interactive Streamlit web application
-- 🧠 Deep learning model using MobileNetV2
-- ⚡ Fast and lightweight inference
+The project includes an interactive Streamlit interface, making it simple to test face mask detection directly from a web browser.
 
 ---
 
 ## ✨ Features
 
-- Detect masks in static images
-- Real-time webcam detection
-- Streamlit web interface
-- Deep Learning with TensorFlow & Keras
-- Lightweight MobileNetV2 architecture
-- Easy to train with custom datasets
+- 😷 Face mask detection from images
+- 🎥 Real-time webcam detection
+- 🌐 Interactive Streamlit web application
+- 🧠 MobileNetV2 deep learning model
+- ⚡ Fast and lightweight inference
+- 📱 Simple and user-friendly interface
 
 ---
 
@@ -39,10 +41,10 @@ MadMasker is a deep learning-based computer vision application that detects whet
 |------------|---------|
 | Python | Programming Language |
 | TensorFlow | Deep Learning Framework |
-| Keras | Model Building |
+| Keras | Model Development |
 | OpenCV | Computer Vision |
-| Streamlit | Web Interface |
-| MobileNetV2 | Image Classification |
+| Streamlit | Web Application |
+| MobileNetV2 | Image Classification Model |
 
 ---
 
@@ -51,27 +53,19 @@ MadMasker is a deep learning-based computer vision application that detects whet
 ```text
 MadMasker/
 │
-├── __pycache__/                # Python cache
-├── css/                        # Streamlit styles
-├── dataset/                    # Dataset
-├── face_detector/              # Face detector model
-├── images/                     # Sample images
-├── incep_v3_mask_model/        # InceptionV3 model
-├── Logo/                       # Project logo
-├── Readme_images/              # README assets
-├── ResNet50_v2/                # ResNet50V2 model
+├── css/
+├── face_detector/
+├── images/
+├── Logo/
+├── Readme_images/
 │
 ├── .gitignore
-├── _config.yml
-├── app.py                      # Streamlit app
-├── detect_mask_image.py        # Image detection
-├── detect_mask_video.py        # Webcam detection
-├── train_mask_detector.py      # Train model
-├── model2onnx.py               # Convert model to ONNX
-├── search.py                   # Utility script
-├── mask_detector.model         # Trained model
-├── plot.png                    # Training plot
+├── app.py
+├── detect_mask_image.py
+├── detect_mask_video.py
+├── mask_detector.model
 ├── requirements.txt
+├── runtime.txt
 └── README.md
 ```
 
@@ -79,20 +73,25 @@ MadMasker/
 
 ## ⚙️ Installation
 
-### Clone the repository
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/syedjawadulhassan/MadMasker.git
+
 cd MadMasker
 ```
 
-### Create Virtual Environment
+---
+
+### 2️⃣ Create a Virtual Environment
 
 ```bash
 python -m venv env
 ```
 
-### Activate
+---
+
+### 3️⃣ Activate the Virtual Environment
 
 **Windows**
 
@@ -106,7 +105,9 @@ env\Scripts\activate
 source env/bin/activate
 ```
 
-### Install Dependencies
+---
+
+### 4️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -116,11 +117,13 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 
-### Detect Face Mask in an Image
+### Detect Face Mask from an Image
 
 ```bash
 python detect_mask_image.py --image images/test.jpg
 ```
+
+---
 
 ### Real-Time Webcam Detection
 
@@ -130,10 +133,18 @@ python detect_mask_video.py
 
 Press **Q** to quit.
 
+---
+
 ### Run Streamlit Application
 
 ```bash
 streamlit run app.py
+```
+
+Then open:
+
+```
+http://localhost:8501
 ```
 
 ---
@@ -143,30 +154,56 @@ streamlit run app.py
 | Property | Value |
 |----------|-------|
 | Base Model | MobileNetV2 |
-| Framework | TensorFlow/Keras |
-| Task | Face Mask Classification |
+| Framework | TensorFlow / Keras |
+| Task | Binary Image Classification |
 | Classes | Mask / No Mask |
-| Input | RGB Images |
+| Input Size | 224 × 224 RGB |
+
+---
+
+## 📸 Application Preview
+
+> Add screenshots inside the `Readme_images` folder and replace the filenames below.
+
+### Home Page
+
+```markdown
+![Home](Readme_images/home.png)
+```
+
+### Image Detection
+
+```markdown
+![Image Detection](Readme_images/image_detection.png)
+```
+
+### Webcam Detection
+
+```markdown
+![Webcam Detection](Readme_images/webcam.png)
+```
 
 ---
 
 ## 📈 Future Improvements
 
-- Face recognition integration
-- YOLO-based detection
-- ONNX optimization
-- Docker deployment
+- YOLO-based face detection
+- ONNX model optimization
+- Docker support
 - Cloud deployment
-- Multi-face tracking
+- Face recognition integration
+- Multi-person tracking
+- Performance optimization
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
-1. Fork the repository
-2. Create a feature branch
+1. Fork this repository
+
+2. Create a new branch
 
 ```bash
 git checkout -b feature-name
@@ -178,7 +215,7 @@ git checkout -b feature-name
 git commit -m "Add feature"
 ```
 
-4. Push to GitHub
+4. Push the branch
 
 ```bash
 git push origin feature-name
@@ -190,17 +227,34 @@ git push origin feature-name
 
 ## 📄 License
 
-This project is intended for educational and research purposes.
+This project is released under the **MIT License** and is intended for educational, research, and demonstration purposes.
 
 ---
 
 ## 👨‍💻 Author
 
-**Syed Jawad Ul Hassan**
+### Syed Jawad Ul Hassan
 
-🎓 B.Tech Computer Science & Engineering
+**B.Tech Computer Science & Engineering**
 
-- GitHub: https://github.com/syedjawadulhassan
-- LinkedIn: https://linkedin.com/in/syed-jawad-ul-hassan
+GitHub:
+https://github.com/syedjawadulhassan
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+LinkedIn:
+https://linkedin.com/in/syed-jawad-ul-hassan
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and supports future development.
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Syed Jawad Ul Hassan**
+
+</div>
